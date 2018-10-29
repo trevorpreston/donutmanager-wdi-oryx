@@ -636,3 +636,1181 @@ Processing by DonutsController#show as HTML
 Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/donuts/1/edit" for 127.0.0.1 at 2018-10-29 15:34:13 +0300
+Processing by DonutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering donuts/edit.html.erb within layouts/application
+  Rendered donuts/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 30ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donuts/1/edit" for 127.0.0.1 at 2018-10-29 15:36:55 +0300
+Processing by DonutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering donuts/edit.html.erb within layouts/application
+  Rendered donuts/_form.html.erb (3.6ms)
+  Rendered donuts/edit.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>I AM A FORM</h1>
+    2: 
+    3: <%= form_for @donut do |form| %>
+    4:   Name: <%= form.text_field :name %>
+    5:   Size: <%= form.text_field :size %>
+    6:   Frosting Type: <%= form.text_field :frosting_type %>
+  
+app/views/donuts/_form.html.erb:3:in `_app_views_donuts__form_html_erb__4145721507016336715_70198343308800'
+app/views/donuts/edit.html.erb:2:in `_app_views_donuts_edit_html_erb___42973120271214108_70198343241800'
+Started GET "/donuts/1/edit" for 127.0.0.1 at 2018-10-29 15:38:02 +0300
+Processing by DonutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/edit.html.erb within layouts/application
+  Rendered donuts/_form.html.erb (1.6ms)
+  Rendered donuts/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 31ms (Views: 21.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/donuts/1/edit" for 127.0.0.1 at 2018-10-29 15:42:09 +0300
+Processing by DonutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/edit.html.erb within layouts/application
+  Rendered donuts/_form.html.erb (1.3ms)
+  Rendered donuts/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 30ms (Views: 20.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/donuts/1/edit" for 127.0.0.1 at 2018-10-29 15:42:10 +0300
+Processing by DonutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/edit.html.erb within layouts/application
+  Rendered donuts/_form.html.erb (1.2ms)
+  Rendered donuts/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 31ms (Views: 27.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/donuts/1" for 127.0.0.1 at 2018-10-29 15:42:35 +0300
+Processing by DonutsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IKqn7azGXq9K7pwnksyKbztEfvF8aIZayqIcoxHZj2lUZZMT7bykCp+9CwZ8rcgGArp3K3ciU8yTWw5XFs57rg==", "donut"=>{"name"=>"glazed", "size"=>"large", "frosting_type"=>"chocolate"}, "commit"=>"Update Donut", "id"=>"1"}
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.4ms)[0m  [1m[33mUPDATE "donuts" SET "size" = ?, "frosting_type" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["size", "large"], ["frosting_type", "chocolate"], ["updated_at", "2018-10-29 12:42:35.623724"], ["id", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.4ms)[0m  [1m[33mUPDATE "donuts" SET "name" = ?, "size" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["name", "glazed"], ["size", "large"], ["updated_at", "2018-10-29 12:42:35.627155"], ["id", 2]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.4ms)[0m  [1m[33mUPDATE "donuts" SET "name" = ?, "frosting_type" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["name", "glazed"], ["frosting_type", "chocolate"], ["updated_at", "2018-10-29 12:42:35.631226"], ["id", 3]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.3ms)[0m  [1m[33mUPDATE "donuts" SET "name" = ?, "size" = ?, "frosting_type" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["name", "glazed"], ["size", "large"], ["frosting_type", "chocolate"], ["updated_at", "2018-10-29 12:42:35.633881"], ["id", 4]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.3ms)[0m  [1m[33mUPDATE "donuts" SET "name" = ?, "frosting_type" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["name", "glazed"], ["frosting_type", "chocolate"], ["updated_at", "2018-10-29 12:42:35.636440"], ["id", 5]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.4ms)[0m  [1m[33mUPDATE "donuts" SET "name" = ?, "size" = ?, "frosting_type" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["name", "glazed"], ["size", "large"], ["frosting_type", "chocolate"], ["updated_at", "2018-10-29 12:42:35.639028"], ["id", 6]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Redirected to 
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 7.4ms)
+
+
+  
+NoMethodError (undefined method `donut_donut_donut_donut_donut_donut_url' for #<DonutsController:0x00007fb09eee97f0>):
+  
+app/controllers/donuts_controller.rb:27:in `update'
+Started GET "/donuts/1/edit" for 127.0.0.1 at 2018-10-29 15:44:40 +0300
+Processing by DonutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDonut Load (0.6ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/edit.html.erb within layouts/application
+  Rendered donuts/_form.html.erb (1.6ms)
+  Rendered donuts/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 44ms (Views: 31.6ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/donuts/1" for 127.0.0.1 at 2018-10-29 15:44:48 +0300
+Processing by DonutsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jmskbiBALTW8iZK6kDmNiGBop3svWrX9qndtpL61/P/6pBCQYTrXkGnaBZt+WM/hWZauoSQQYGvzjn9QuaIIOA==", "donut"=>{"name"=>"glazed", "size"=>"small", "frosting_type"=>"chocolate"}, "commit"=>"Update Donut", "id"=>"1"}
+  [1m[36mDonut Load (0.3ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.3ms)[0m  [1m[33mUPDATE "donuts" SET "size" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["size", "small"], ["updated_at", "2018-10-29 12:44:48.467272"], ["id", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.4ms)[0m  [1m[33mUPDATE "donuts" SET "size" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["size", "small"], ["updated_at", "2018-10-29 12:44:48.470291"], ["id", 2]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.3ms)[0m  [1m[33mUPDATE "donuts" SET "size" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["size", "small"], ["updated_at", "2018-10-29 12:44:48.480285"], ["id", 3]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.2ms)[0m  [1m[33mUPDATE "donuts" SET "size" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["size", "small"], ["updated_at", "2018-10-29 12:44:48.482380"], ["id", 4]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.3ms)[0m  [1m[33mUPDATE "donuts" SET "size" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["size", "small"], ["updated_at", "2018-10-29 12:44:48.484445"], ["id", 5]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.3ms)[0m  [1m[33mUPDATE "donuts" SET "size" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["size", "small"], ["updated_at", "2018-10-29 12:44:48.486761"], ["id", 6]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Redirected to http://localhost:3000/donuts/1
+Completed 302 Found in 25ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/donuts/1" for 127.0.0.1 at 2018-10-29 15:44:48 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.2ms)
+  Rendered donuts/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/donuts/2" for 127.0.0.1 at 2018-10-29 15:46:08 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.2ms)
+  Rendered donuts/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 21.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/donuts/3" for 127.0.0.1 at 2018-10-29 15:46:12 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.2ms)
+  Rendered donuts/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts/5" for 127.0.0.1 at 2018-10-29 15:47:16 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.2ms)
+  Rendered donuts/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 29ms (Views: 19.7ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Destroy (0.9ms)[0m  [1m[31mDELETE FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "glazed"], ["size", "medium"], ["frosting_type", "classic"], ["created_at", "2018-10-29 12:49:15.821838"], ["updated_at", "2018-10-29 12:49:15.821838"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "boston cream"], ["size", "medium"], ["frosting_type", "chocolate"], ["created_at", "2018-10-29 12:49:15.824973"], ["updated_at", "2018-10-29 12:49:15.824973"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "bear claws"], ["size", "large"], ["frosting_type", "cinammon"], ["created_at", "2018-10-29 12:49:15.827466"], ["updated_at", "2018-10-29 12:49:15.827466"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "old fashioned"], ["size", "small"], ["frosting_type", "classic"], ["created_at", "2018-10-29 12:49:15.829694"], ["updated_at", "2018-10-29 12:49:15.829694"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Started GET "/donuts/5" for 127.0.0.1 at 2018-10-29 15:49:21 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Donut with 'id'=5):
+  
+app/controllers/donuts_controller.rb:7:in `show'
+Started GET "/donuts/1" for 127.0.0.1 at 2018-10-29 15:49:24 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Donut with 'id'=1):
+  
+app/controllers/donuts_controller.rb:7:in `show'
+Started GET "/donuts/" for 127.0.0.1 at 2018-10-29 15:49:32 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/_form.html.erb (2.7ms)
+  Rendered donuts/index.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>I AM A FORM</h1>
+    2: 
+    3: <%= form_for @donut do |form| %>
+    4:   Name: <%= form.text_field :name %>
+    5:   Size: <%= form.text_field :size %>
+    6:   Frosting Type: <%= form.text_field :frosting_type %>
+  
+app/views/donuts/_form.html.erb:3:in `_app_views_donuts__form_html_erb__4145721507016336715_70198282303740'
+app/views/donuts/index.html.erb:9:in `_app_views_donuts_index_html_erb__881440897072968343_70198286572340'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.4ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "glazed"], ["size", "medium"], ["frosting_type", "classic"], ["created_at", "2018-10-29 12:49:52.235400"], ["updated_at", "2018-10-29 12:49:52.235400"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.2ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "boston cream"], ["size", "medium"], ["frosting_type", "chocolate"], ["created_at", "2018-10-29 12:49:52.237586"], ["updated_at", "2018-10-29 12:49:52.237586"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.2ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "bear claws"], ["size", "large"], ["frosting_type", "cinammon"], ["created_at", "2018-10-29 12:49:52.239335"], ["updated_at", "2018-10-29 12:49:52.239335"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "old fashioned"], ["size", "small"], ["frosting_type", "classic"], ["created_at", "2018-10-29 12:49:52.241408"], ["updated_at", "2018-10-29 12:49:52.241408"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Started GET "/donuts/" for 127.0.0.1 at 2018-10-29 15:49:54 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/_form.html.erb (3.0ms)
+  Rendered donuts/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>I AM A FORM</h1>
+    2: 
+    3: <%= form_for @donut do |form| %>
+    4:   Name: <%= form.text_field :name %>
+    5:   Size: <%= form.text_field :size %>
+    6:   Frosting Type: <%= form.text_field :frosting_type %>
+  
+app/views/donuts/_form.html.erb:3:in `_app_views_donuts__form_html_erb__4145721507016336715_70198359528960'
+app/views/donuts/index.html.erb:9:in `_app_views_donuts_index_html_erb__881440897072968343_70198277750920'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Destroy (0.9ms)[0m  [1m[31mDELETE FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "glazed"], ["size", "medium"], ["frosting_type", "classic"], ["created_at", "2018-10-29 12:50:51.369773"], ["updated_at", "2018-10-29 12:50:51.369773"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.2ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "boston cream"], ["size", "medium"], ["frosting_type", "chocolate"], ["created_at", "2018-10-29 12:50:51.371816"], ["updated_at", "2018-10-29 12:50:51.371816"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "bear claws"], ["size", "large"], ["frosting_type", "cinammon"], ["created_at", "2018-10-29 12:50:51.373981"], ["updated_at", "2018-10-29 12:50:51.373981"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "old fashioned"], ["size", "small"], ["frosting_type", "classic"], ["created_at", "2018-10-29 12:50:51.375921"], ["updated_at", "2018-10-29 12:50:51.375921"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "donuts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "size" varchar, "frosting_type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181029081727)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-29 12:51:02.913315"], ["updated_at", "2018-10-29 12:51:02.913315"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "donuts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "size" varchar, "frosting_type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181029081727)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-29 12:51:02.927247"], ["updated_at", "2018-10-29 12:51:02.927247"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2018-10-29 12:51:02.929875"], ["key", "environment"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Destroy (1.1ms)[0m  [1m[31mDELETE FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "glazed"], ["size", "medium"], ["frosting_type", "classic"], ["created_at", "2018-10-29 12:51:02.942432"], ["updated_at", "2018-10-29 12:51:02.942432"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "boston cream"], ["size", "medium"], ["frosting_type", "chocolate"], ["created_at", "2018-10-29 12:51:02.944671"], ["updated_at", "2018-10-29 12:51:02.944671"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "bear claws"], ["size", "large"], ["frosting_type", "cinammon"], ["created_at", "2018-10-29 12:51:02.946937"], ["updated_at", "2018-10-29 12:51:02.946937"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "old fashioned"], ["size", "small"], ["frosting_type", "classic"], ["created_at", "2018-10-29 12:51:02.949054"], ["updated_at", "2018-10-29 12:51:02.949054"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Destroy (1.2ms)[0m  [1m[31mDELETE FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "glazed"], ["size", "medium"], ["frosting_type", "classic"], ["created_at", "2018-10-29 12:51:09.489620"], ["updated_at", "2018-10-29 12:51:09.489620"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "boston cream"], ["size", "medium"], ["frosting_type", "chocolate"], ["created_at", "2018-10-29 12:51:09.491865"], ["updated_at", "2018-10-29 12:51:09.491865"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "bear claws"], ["size", "large"], ["frosting_type", "cinammon"], ["created_at", "2018-10-29 12:51:09.494019"], ["updated_at", "2018-10-29 12:51:09.494019"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "old fashioned"], ["size", "small"], ["frosting_type", "classic"], ["created_at", "2018-10-29 12:51:09.495851"], ["updated_at", "2018-10-29 12:51:09.495851"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Started GET "/donuts/" for 127.0.0.1 at 2018-10-29 15:51:11 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/_form.html.erb (2.7ms)
+  Rendered donuts/index.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>I AM A FORM</h1>
+    2: 
+    3: <%= form_for @donut do |form| %>
+    4:   Name: <%= form.text_field :name %>
+    5:   Size: <%= form.text_field :size %>
+    6:   Frosting Type: <%= form.text_field :frosting_type %>
+  
+app/views/donuts/_form.html.erb:3:in `_app_views_donuts__form_html_erb__4145721507016336715_70198290347020'
+app/views/donuts/index.html.erb:9:in `_app_views_donuts_index_html_erb__881440897072968343_70198355496140'
+  [1m[36mDonut Load (0.6ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Destroy (1.1ms)[0m  [1m[31mDELETE FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Destroy (1.0ms)[0m  [1m[31mDELETE FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE table_name AUTO_INCREMENT = 1[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Migrating to CreateDonuts (20181029081727)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "donuts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "size" varchar, "frosting_type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181029081727"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-29 12:55:49.491405"], ["updated_at", "2018-10-29 12:55:49.491405"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Destroy (1.0ms)[0m  [1m[31mDELETE FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "glazed"], ["size", "medium"], ["frosting_type", "classic"], ["created_at", "2018-10-29 12:55:55.404077"], ["updated_at", "2018-10-29 12:55:55.404077"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "boston cream"], ["size", "medium"], ["frosting_type", "chocolate"], ["created_at", "2018-10-29 12:55:55.406379"], ["updated_at", "2018-10-29 12:55:55.406379"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "bear claws"], ["size", "large"], ["frosting_type", "cinammon"], ["created_at", "2018-10-29 12:55:55.409044"], ["updated_at", "2018-10-29 12:55:55.409044"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "old fashioned"], ["size", "small"], ["frosting_type", "classic"], ["created_at", "2018-10-29 12:55:55.411094"], ["updated_at", "2018-10-29 12:55:55.411094"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Started GET "/donuts/" for 127.0.0.1 at 2018-10-29 15:55:57 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/_form.html.erb (2.6ms)
+  Rendered donuts/index.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>I AM A FORM</h1>
+    2: 
+    3: <%= form_for @donut do |form| %>
+    4:   Name: <%= form.text_field :name %>
+    5:   Size: <%= form.text_field :size %>
+    6:   Frosting Type: <%= form.text_field :frosting_type %>
+  
+app/views/donuts/_form.html.erb:3:in `_app_views_donuts__form_html_erb__4145721507016336715_70198364102080'
+app/views/donuts/index.html.erb:9:in `_app_views_donuts_index_html_erb__881440897072968343_70198279444640'
+  [1m[36mDonut Load (0.6ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+Started PUT "/__web_console/repl_sessions/ea2c54405ce1d927bd64821986baa42c" for 127.0.0.1 at 2018-10-29 15:56:29 +0300
+Started PUT "/__web_console/repl_sessions/ea2c54405ce1d927bd64821986baa42c" for 127.0.0.1 at 2018-10-29 15:56:34 +0300
+Started GET "/donuts/" for 127.0.0.1 at 2018-10-29 15:58:00 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts/1" for 127.0.0.1 at 2018-10-29 15:58:07 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.3ms)
+  Rendered donuts/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts/1/edit" for 127.0.0.1 at 2018-10-29 15:58:13 +0300
+Processing by DonutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDonut Load (0.3ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/edit.html.erb within layouts/application
+  Rendered donuts/_form.html.erb (1.3ms)
+  Rendered donuts/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/donuts/1" for 127.0.0.1 at 2018-10-29 15:58:48 +0300
+Processing by DonutsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eXcIhiszeaMQLgfWI+8x5wVyJoItfKEPD4VGnfAHfLoNuDx4akmDBsV9kPfNjnOOPIwvWCY2dJlWfFRp9xCIfQ==", "donut"=>{"name"=>"glazed", "size"=>"small", "frosting_type"=>"chocolate"}, "commit"=>"Update Donut", "id"=>"1"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.4ms)[0m  [1m[33mUPDATE "donuts" SET "size" = ?, "frosting_type" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["size", "small"], ["frosting_type", "chocolate"], ["updated_at", "2018-10-29 12:58:48.220636"], ["id", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Redirected to http://localhost:3000/donuts/1
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/donuts/1" for 127.0.0.1 at 2018-10-29 15:58:48 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.3ms)
+  Rendered donuts/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts/2" for 127.0.0.1 at 2018-10-29 15:58:54 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.3ms)
+  Rendered donuts/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 16:07:54 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 16:10:31 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/donuts/2" for 127.0.0.1 at 2018-10-29 16:16:31 +0300
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for DonutsController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started DELETE "/donuts/2" for 127.0.0.1 at 2018-10-29 16:16:45 +0300
+Processing by DonutsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9fXmQjXog9pw5Ei2dMUxT0z87vzBG67feepC4BEj01+BOtK8dJJ5f6W335eapHMmdQLnJspRe0kgE1AUFjQnmA==", "id"=>"2"}
+No template found for DonutsController#destroy, rendering head :no_content
+Completed 204 No Content in 120ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/donuts/2" for 127.0.0.1 at 2018-10-29 16:16:50 +0300
+Processing by DonutsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9fXmQjXog9pw5Ei2dMUxT0z87vzBG67feepC4BEj01+BOtK8dJJ5f6W335eapHMmdQLnJspRe0kgE1AUFjQnmA==", "id"=>"2"}
+No template found for DonutsController#destroy, rendering head :no_content
+Completed 204 No Content in 121ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/donuts/2" for 127.0.0.1 at 2018-10-29 16:16:52 +0300
+Processing by DonutsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9fXmQjXog9pw5Ei2dMUxT0z87vzBG67feepC4BEj01+BOtK8dJJ5f6W335eapHMmdQLnJspRe0kgE1AUFjQnmA==", "id"=>"2"}
+No template found for DonutsController#destroy, rendering head :no_content
+Completed 204 No Content in 120ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/donuts/2" for 127.0.0.1 at 2018-10-29 16:16:53 +0300
+Processing by DonutsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9fXmQjXog9pw5Ei2dMUxT0z87vzBG67feepC4BEj01+BOtK8dJJ5f6W335eapHMmdQLnJspRe0kgE1AUFjQnmA==", "id"=>"2"}
+No template found for DonutsController#destroy, rendering head :no_content
+Completed 204 No Content in 119ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/donuts/2" for 127.0.0.1 at 2018-10-29 16:16:53 +0300
+Processing by DonutsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9fXmQjXog9pw5Ei2dMUxT0z87vzBG67feepC4BEj01+BOtK8dJJ5f6W335eapHMmdQLnJspRe0kgE1AUFjQnmA==", "id"=>"2"}
+No template found for DonutsController#destroy, rendering head :no_content
+Completed 204 No Content in 122ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/donuts/2" for 127.0.0.1 at 2018-10-29 16:16:54 +0300
+Processing by DonutsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9fXmQjXog9pw5Ei2dMUxT0z87vzBG67feepC4BEj01+BOtK8dJJ5f6W335eapHMmdQLnJspRe0kgE1AUFjQnmA==", "id"=>"2"}
+No template found for DonutsController#destroy, rendering head :no_content
+Completed 204 No Content in 121ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 16:18:18 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 29ms (Views: 24.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 16:18:23 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/donuts/2" for 127.0.0.1 at 2018-10-29 16:18:25 +0300
+Processing by DonutsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DtZ5TPdz32RXblN/JNyJSiucRL1jTigSV82HHD9hE9d6GU2ytgklwYI9xF7KvcsjEmJNZ2gE/YQONJXoOHbnEA==", "id"=>"2"}
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Destroy (0.3ms)[0m  [1m[31mDELETE FROM "donuts" WHERE "donuts"."id" = ?[0m  [["id", 2]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 1.4ms)
+
+
+  
+NameError (undefined local variable or method `donuts' for #<DonutsController:0x00007fb09f63e6b8>
+Did you mean?  @donut):
+  
+app/controllers/donuts_controller.rb:34:in `destroy'
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 16:18:38 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 31ms (Views: 25.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 16:18:48 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 30ms (Views: 26.0ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/donuts/3" for 127.0.0.1 at 2018-10-29 16:18:50 +0300
+Processing by DonutsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZO3rNP9hNl1duR9D5MXbcpJySCIz6pkCjJ5M4EAVkI4QIt/KvhvM+IjqiGIKpJkbq4xB+DigTJTVZ14URwJkSQ==", "id"=>"3"}
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Destroy (0.3ms)[0m  [1m[31mDELETE FROM "donuts" WHERE "donuts"."id" = ?[0m  [["id", 3]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Redirected to http://localhost:3000/donuts
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 16:18:50 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 16:22:19 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 30ms (Views: 25.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/donuts/1/edit" for 127.0.0.1 at 2018-10-29 16:22:21 +0300
+Processing by DonutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDonut Load (0.3ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/edit.html.erb within layouts/application
+  Rendered donuts/_form.html.erb (2.3ms)
+  Rendered donuts/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 35ms (Views: 30.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/donuts/1" for 127.0.0.1 at 2018-10-29 16:22:27 +0300
+Processing by DonutsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2PtFWtlRX69X5KV+zZIonQST417bmYHMs7Klabzhcvg5NP2QJauBs1jqNeT1U3ZOKnNN2ttPO0osd8VudIQh6w==", "donut"=>{"name"=>"glazed", "size"=>"small", "frosting_type"=>"vanilla!"}, "commit"=>"Update Donut", "id"=>"1"}
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.4ms)[0m  [1m[33mUPDATE "donuts" SET "frosting_type" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["frosting_type", "vanilla!"], ["updated_at", "2018-10-29 13:22:27.139648"], ["id", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Redirected to http://localhost:3000/donuts.1
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/donuts.1" for 127.0.0.1 at 2018-10-29 16:22:27 +0300
+Processing by DonutsController#index as 
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 78ms (Views: 44.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/donuts.1" for 127.0.0.1 at 2018-10-29 16:24:42 +0300
+Processing by DonutsController#index as 
+  Rendering donuts/index.html.erb within layouts/application
+  Rendered donuts/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/trevorpreston/code/wdi/lessons/w5-d2-CRUD-and-forms/DonutManager/app/views/donuts/index.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+          ^~~
+/Users/trevorpreston/code/wdi/lessons/w5-d2-CRUD-and-forms/DonutManager/app/views/donuts/index.html.erb:11: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/trevorpreston/code/wdi/lessons/w5-d2-CRUD-and-forms/DonutManager/app/views/donuts/index.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/donuts/index.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+app/views/donuts/index.html.erb:11: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/donuts/index.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/donuts.1" for 127.0.0.1 at 2018-10-29 16:25:36 +0300
+Processing by DonutsController#index as 
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 78ms (Views: 46.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 16:25:43 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 16:25:44 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts/1" for 127.0.0.1 at 2018-10-29 16:25:46 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDonut Load (0.3ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.4ms)
+  Rendered donuts/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 16:28:00 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 37ms (Views: 33.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts/new" for 127.0.0.1 at 2018-10-29 16:28:07 +0300
+Processing by DonutsController#new as HTML
+  Rendering donuts/new.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.4ms)
+  Rendered donuts/_form.html.erb (1.7ms)
+  Rendered donuts/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/donuts" for 127.0.0.1 at 2018-10-29 16:28:16 +0300
+Processing by DonutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lZzz1IbHOyi0NCuqYyDRXLJ8qMlS8slagMJsV8OxdvOc0kbtAxbtlylycmoIUHtrnCyZnToRZjcclTV4frkBOg==", "donut"=>{"name"=>"trevor donut", "size"=>"massive", "frosting_type"=>"delicious"}, "commit"=>"Create Donut"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.5ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "trevor donut"], ["size", "massive"], ["frosting_type", "delicious"], ["created_at", "2018-10-29 13:28:16.272152"], ["updated_at", "2018-10-29 13:28:16.272152"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Redirected to http://localhost:3000/donuts/5
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/donuts/5" for 127.0.0.1 at 2018-10-29 16:28:16 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.3ms)
+  Rendered donuts/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/donuts/5" for 127.0.0.1 at 2018-10-29 16:29:09 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.4ms)
+  Rendered donuts/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 16:29:10 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts/5/edit" for 127.0.0.1 at 2018-10-29 16:29:16 +0300
+Processing by DonutsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/edit.html.erb within layouts/application
+  Rendered donuts/_form.html.erb (1.6ms)
+  Rendered donuts/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 30ms (Views: 25.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/donuts/5" for 127.0.0.1 at 2018-10-29 16:29:26 +0300
+Processing by DonutsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y7g60SAOs4xxtuyA2N3mjkKX9dRpgH8EihIxVR38GC+gEmOUtJHSeYNSLhouv3wqRanWrhl7Wf97sfoW+4MLMQ==", "donut"=>{"name"=>"trevor donut", "size"=>"massive", "frosting_type"=>"super delicious"}, "commit"=>"Update Donut", "id"=>"5"}
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.4ms)[0m  [1m[33mUPDATE "donuts" SET "frosting_type" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["frosting_type", "super delicious"], ["updated_at", "2018-10-29 13:29:26.684295"], ["id", 5]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Redirected to http://localhost:3000/donuts.5
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/donuts.5" for 127.0.0.1 at 2018-10-29 16:29:26 +0300
+Processing by DonutsController#index as 
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 75ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts.5" for 127.0.0.1 at 2018-10-29 16:29:53 +0300
+Processing by DonutsController#index as 
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 76ms (Views: 45.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/donuts/5/edit" for 127.0.0.1 at 2018-10-29 16:29:55 +0300
+Processing by DonutsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/edit.html.erb within layouts/application
+  Rendered donuts/_form.html.erb (1.3ms)
+  Rendered donuts/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 30ms (Views: 26.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/donuts/5" for 127.0.0.1 at 2018-10-29 16:29:59 +0300
+Processing by DonutsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"746opZCCm+D6fK3ilbuRicPeQlqYrF/Q56JidTFJ2n+EJPHgBB36FQiYb3hj2QstxOBhIOhXeSsWAak21zbJYQ==", "donut"=>{"name"=>"trevor donut", "size"=>"massive", "frosting_type"=>"super delicious!!"}, "commit"=>"Update Donut", "id"=>"5"}
+  [1m[36mDonut Load (0.4ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.4ms)[0m  [1m[33mUPDATE "donuts" SET "frosting_type" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["frosting_type", "super delicious!!"], ["updated_at", "2018-10-29 13:29:59.943635"], ["id", 5]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Redirected to http://localhost:3000/donuts.5
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/donuts.5" for 127.0.0.1 at 2018-10-29 16:29:59 +0300
+Processing by DonutsController#index as 
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 75ms (Views: 43.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts.5" for 127.0.0.1 at 2018-10-29 16:30:13 +0300
+Processing by DonutsController#index as 
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 82ms (Views: 49.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/donuts/5/edit" for 127.0.0.1 at 2018-10-29 16:30:15 +0300
+Processing by DonutsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/edit.html.erb within layouts/application
+  Rendered donuts/_form.html.erb (1.6ms)
+  Rendered donuts/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 29ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/donuts/5" for 127.0.0.1 at 2018-10-29 16:30:18 +0300
+Processing by DonutsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TGfK9bgh+H5SjfUNSIy4W08kOBUUiJ1MES/6LR94UKwnzZOwLL6Zi6BpN5e+7iL/SBobb2Rzu7fgjDFu+QdDsg==", "donut"=>{"name"=>"trevor donut", "size"=>"massive", "frosting_type"=>"super delicious!!!!!!!"}, "commit"=>"Update Donut", "id"=>"5"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Update (0.3ms)[0m  [1m[33mUPDATE "donuts" SET "frosting_type" = ?, "updated_at" = ? WHERE "donuts"."id" = ?[0m  [["frosting_type", "super delicious!!!!!!!"], ["updated_at", "2018-10-29 13:30:18.986381"], ["id", 5]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Redirected to http://localhost:3000/donuts/5
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/donuts/5" for 127.0.0.1 at 2018-10-29 16:30:18 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.4ms)
+  Rendered donuts/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 16:30:21 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts/new" for 127.0.0.1 at 2018-10-29 16:30:29 +0300
+Processing by DonutsController#new as HTML
+  Rendering donuts/new.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.5ms)
+  Rendered donuts/_form.html.erb (1.1ms)
+  Rendered donuts/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 36ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+

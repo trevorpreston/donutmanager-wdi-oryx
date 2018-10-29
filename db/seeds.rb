@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Donut.delete_all
+
 Donut.create({name: "glazed", size: "medium", frosting_type: "classic"})
 Donut.create({name: "boston cream", size: "medium", frosting_type: "chocolate"})
 Donut.create({name: "bear claws", size: "large", frosting_type: "cinammon"})

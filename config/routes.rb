@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :donuts, only: [:index, :show, :new, :create]
+  resources :donuts
+  # same as  resources :donuts, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+
 end

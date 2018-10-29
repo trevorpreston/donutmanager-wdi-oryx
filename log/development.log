@@ -1,0 +1,638 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Migrating to CreateDonuts (20181029081727)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "donuts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "size" varchar, "frosting_type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181029081727"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-29 08:18:05.698259"], ["updated_at", "2018-10-29 08:18:05.698259"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.3ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "glazed"], ["size", "medium"], ["frosting_type", "classic"], ["created_at", "2018-10-29 08:21:41.277640"], ["updated_at", "2018-10-29 08:21:41.277640"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.2ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "boston cream"], ["size", "medium"], ["frosting_type", "chocolate"], ["created_at", "2018-10-29 08:21:41.279884"], ["updated_at", "2018-10-29 08:21:41.279884"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.2ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "bear claws"], ["size", "large"], ["frosting_type", "cinammon"], ["created_at", "2018-10-29 08:21:41.281620"], ["updated_at", "2018-10-29 08:21:41.281620"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.2ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "old fashioned"], ["size", "small"], ["frosting_type", "classic"], ["created_at", "2018-10-29 08:21:41.283560"], ["updated_at", "2018-10-29 08:21:41.283560"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Load (0.5ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mDonut Load (1.1ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+Started GET "/" for 127.0.0.1 at 2018-10-29 13:09:48 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 21ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 13:09:53 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  Rendered donuts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 537ms (Views: 530.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 13:10:24 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/donuts"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/donuts/index" for 127.0.0.1 at 2018-10-29 13:10:30 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  Rendered donuts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donuts/index" for 127.0.0.1 at 2018-10-29 13:24:52 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  Rendered donuts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donuts/index" for 127.0.0.1 at 2018-10-29 13:30:04 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  
+ActionController::RoutingError (No route matches [GET] "/donuts/index"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/donuts/index" for 127.0.0.1 at 2018-10-29 13:30:14 +0300
+Started GET "/donuts/index" for 127.0.0.1 at 2018-10-29 13:30:24 +0300
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 13:30:24 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/donuts/index"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/donuts/index"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  Rendered donuts/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 132ms (Views: 129.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 13:33:03 +0300
+  
+SyntaxError (/Users/trevorpreston/code/wdi/lessons/w5-d2-CRUD-and-forms/DonutManager/config/routes.rb:3: syntax error, unexpected [, expecting keyword_do or '{' or '('
+  resources :donuts, only [:index]
+                          ^):
+  
+config/routes.rb:3: syntax error, unexpected [, expecting keyword_do or '{' or '('
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 13:33:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/donuts"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/donuts/index" for 127.0.0.1 at 2018-10-29 13:33:13 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/donuts/index"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/donuts/" for 127.0.0.1 at 2018-10-29 13:33:33 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  Rendered donuts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 13:36:44 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  Rendered donuts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 166ms (Views: 158.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donuts/" for 127.0.0.1 at 2018-10-29 13:44:47 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 29ms (Views: 25.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 13:48:39 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts/1" for 127.0.0.1 at 2018-10-29 13:54:41 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donuts/1" for 127.0.0.1 at 2018-10-29 14:16:45 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 180ms (Views: 163.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/donuts/2" for 127.0.0.1 at 2018-10-29 14:16:51 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts/2" for 127.0.0.1 at 2018-10-29 14:17:32 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts/2" for 127.0.0.1 at 2018-10-29 14:23:03 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts/" for 127.0.0.1 at 2018-10-29 14:23:06 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/_form.html.erb (0.2ms)
+  Rendered donuts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts/1" for 127.0.0.1 at 2018-10-29 14:23:43 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDonut Load (0.3ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_form.html.erb (0.2ms)
+  Rendered donuts/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/donuts/" for 127.0.0.1 at 2018-10-29 14:23:47 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/_form.html.erb (0.3ms)
+  Rendered donuts/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts" for 127.0.0.1 at 2018-10-29 14:23:49 +0300
+Processing by DonutsController#index as HTML
+  Rendering donuts/index.html.erb within layouts/application
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT "donuts".* FROM "donuts"[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendered donuts/_form.html.erb (0.2ms)
+  Rendered donuts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts3" for 127.0.0.1 at 2018-10-29 14:23:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/donuts3"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/donuts/3" for 127.0.0.1 at 2018-10-29 14:23:55 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_form.html.erb (0.2ms)
+  Rendered donuts/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/donuts/new" for 127.0.0.1 at 2018-10-29 14:30:27 +0300
+Processing by DonutsController#new as HTML
+  Rendering donuts/new.html.erb within layouts/application
+  Rendered donuts/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donuts/new" for 127.0.0.1 at 2018-10-29 14:34:02 +0300
+Processing by DonutsController#new as HTML
+  Rendering donuts/new.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.2ms)
+  Rendered donuts/_form.html.erb (0.2ms)
+  Rendered donuts/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donuts/new" for 127.0.0.1 at 2018-10-29 14:38:17 +0300
+Processing by DonutsController#new as HTML
+  Rendering donuts/new.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.2ms)
+  Rendered donuts/_form.html.erb (1.2ms)
+  Rendered donuts/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 33ms (Views: 23.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/donuts/new" for 127.0.0.1 at 2018-10-29 14:38:55 +0300
+Processing by DonutsController#new as HTML
+  Rendering donuts/new.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.2ms)
+  Rendered donuts/_form.html.erb (10.0ms)
+  Rendered donuts/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donuts/new" for 127.0.0.1 at 2018-10-29 14:47:56 +0300
+Processing by DonutsController#new as HTML
+  Rendering donuts/new.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.2ms)
+  Rendered donuts/_form.html.erb (1.2ms)
+  Rendered donuts/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 32ms (Views: 23.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/donuts" for 127.0.0.1 at 2018-10-29 14:48:08 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/donuts"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/donuts" for 127.0.0.1 at 2018-10-29 14:50:17 +0300
+Processing by DonutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3M2MJwIBtiVDkYbveda1muMlL1TLP4LetYHE5cz/ZeSoArjZQ3tMgJbCEc6Xt/fz2tsmjsB1V0jseNYRy+iRIw==", "donut"=>{"name"=>"maple bar", "size"=>"medium", "frosting_type"=>"maple"}, "commit"=>"Create Donut"}
+Started GET "/donuts/new" for 127.0.0.1 at 2018-10-29 14:50:23 +0300
+No template found for DonutsController#create, rendering head :no_content
+Completed 204 No Content in 20824ms (ActiveRecord: 0.0ms)
+
+
+Processing by DonutsController#new as HTML
+  Rendering donuts/new.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.3ms)
+  Rendered donuts/_form.html.erb (1.7ms)
+  Rendered donuts/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 38ms (Views: 27.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/donuts" for 127.0.0.1 at 2018-10-29 14:51:13 +0300
+Processing by DonutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EDyPTbCg/HFXCrY3pFizbBqPa8VCmpY1aNI8lv8Baxhk87uz8doG1IJZIRZKOfEFI3FiH0nQQ6MxKy5i+Baf3w==", "donut"=>{"name"=>"sprinkled", "size"=>"medium", "frosting_type"=>"colorful"}, "commit"=>"Create Donut"}
+No template found for DonutsController#create, rendering head :no_content
+Completed 204 No Content in 401568ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/donuts/new" for 127.0.0.1 at 2018-10-29 14:57:55 +0300
+Processing by DonutsController#new as HTML
+  Rendering donuts/new.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.2ms)
+  Rendered donuts/_form.html.erb (1.6ms)
+  Rendered donuts/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 33ms (Views: 24.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/donuts/new" for 127.0.0.1 at 2018-10-29 14:57:57 +0300
+Processing by DonutsController#new as HTML
+  Rendering donuts/new.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.2ms)
+  Rendered donuts/_form.html.erb (1.1ms)
+  Rendered donuts/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/donuts" for 127.0.0.1 at 2018-10-29 14:58:20 +0300
+Processing by DonutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AC6584kR+Hd2pgGGbGUNIciRc6qBmezGnwTvhQzIFTx04Y0NyGsC0qP1lqeCBE9I8W96cIrTOVDG/f1xC9/h+w==", "donut"=>{"name"=>"jelly filled", "size"=>"large", "frosting_type"=>"powdered sugar"}, "commit"=>"Create Donut"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.5ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "jelly filled"], ["size", "large"], ["frosting_type", "powdered sugar"], ["created_at", "2018-10-29 11:58:20.136721"], ["updated_at", "2018-10-29 11:58:20.136721"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Redirected to http://localhost:3000/donuts/5
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/donuts/5" for 127.0.0.1 at 2018-10-29 14:58:20 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDonut Load (0.2ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.2ms)
+  Rendered donuts/_form.html.erb (1.1ms)
+  Rendered donuts/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/donuts/5" for 127.0.0.1 at 2018-10-29 14:58:47 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.2ms)
+  Rendered donuts/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/donuts/new" for 127.0.0.1 at 2018-10-29 14:58:52 +0300
+Processing by DonutsController#new as HTML
+  Rendering donuts/new.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.2ms)
+  Rendered donuts/_form.html.erb (1.1ms)
+  Rendered donuts/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/donuts" for 127.0.0.1 at 2018-10-29 15:00:01 +0300
+Processing by DonutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KPtI62xUK0clDbln/vEtFSwFO/QDNmK5VoyL/eTn19dcNHwVLS7R4vBeLkYQkG98FfsyLgh8ty8PdZkJ4/AjEA==", "donut"=>{"name"=>"truffle donut", "size"=>"small", "frosting_type"=>"truffles"}, "commit"=>"Create Donut"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[36mDonut Create (0.4ms)[0m  [1m[32mINSERT INTO "donuts" ("name", "size", "frosting_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "truffle donut"], ["size", "small"], ["frosting_type", "truffles"], ["created_at", "2018-10-29 12:00:01.254672"], ["updated_at", "2018-10-29 12:00:01.254672"]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+Redirected to http://localhost:3000/donuts/6
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/donuts/6" for 127.0.0.1 at 2018-10-29 15:00:01 +0300
+Processing by DonutsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDonut Load (0.1ms)[0m  [1m[34mSELECT  "donuts".* FROM "donuts" WHERE "donuts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/trevorpreston/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.1/lib/active_support/subscriber.rb:101
+  Rendering donuts/show.html.erb within layouts/application
+  Rendered donuts/_nav.html.erb (0.2ms)
+  Rendered donuts/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.1ms)
+
+

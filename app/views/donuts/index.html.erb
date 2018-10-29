@@ -1,0 +1,9 @@
+<h1>All the Donuts</h1>
+
+<% @donuts.each do |donut| %>
+  <p>Name: <%= donut.name %></p>
+  <p>Size: <%= donut.size %></p>
+  <p>Frosting: <%= donut.frosting_type %></p>
+<% end %>
+
+<%= render partial: "form" %>
